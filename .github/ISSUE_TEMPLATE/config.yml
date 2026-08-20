@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/jackyjinggit/co-agency-integrity/discussions
+    about: Ask questions, share use cases, or discuss the anti-sycophancy thesis here — issues are for bugs and feature requests.

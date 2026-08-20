@@ -1,0 +1,44 @@
+name: Feature / method request
+description: Propose a new detection method, a new skill, or an improvement to the toolkit
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This toolkit is a hygiene layer for human–AI co-agency. Before proposing,
+        check [`docs/WHY.md`](docs/WHY.md) — if your idea is a *new failure mode*
+        we don't yet catch, that's exactly what this section is for.
+  - type: textarea
+    id: gap
+    attributes:
+      label: What failure mode / gap does this address?
+      description: Name the cognitive corruption or governance drift you want to catch.
+      placeholder: |
+        Example: "A collaborator that only ever agrees with me, but I can't tell
+        whether the dissent I hear is real or scripted by the same model."
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed method (sketch is fine)
+      description: How would the skill detect / audit it? What are the observable signals?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope & boundaries
+      description: What should this skill NOT claim to do? (Every honest tool needs limits.)
+    validations:
+      required: false
+  - type: checkboxes
+    id: selfcheck
+    attributes:
+      label: Before submitting
+      options:
+        - label: I redacted all personal information
+          required: true
+        - label: I read docs/WHY.md and this is not covered there
+          required: false

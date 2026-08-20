@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a broken skill, a false positive, or a miss in the toolkit
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. The whole point of this toolkit
+        is honesty — so please be specific about what happened.
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill?
+      description: e.g. metaphor-power-audit / autoethnography-peer-review / audit-quantification / governance-precheck
+      placeholder: "skills/metaphor-power-audit"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you run, and what went wrong?
+      placeholder: |
+        I loaded the skill and asked it to audit a collaboration document.
+        It returned "no power metaphor detected" but the text clearly used
+        "commander" language.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: What should the skill have produced instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction (optional)
+      description: Redacted input + output. Do NOT paste personal data — that defeats the purpose.
+      placeholder: |
+        Input: <redacted snippet>
+        Output: <what the skill returned>
+  - type: checkboxes
+    id: selfcheck
+    attributes:
+      label: Before submitting
+      options:
+        - label: I redacted all personal information from the reproduction
+          required: true
+        - label: I checked existing issues for a duplicate
+          required: false
